@@ -23,7 +23,7 @@ module Administrate
     end
 
     def permitted_attributes
-      form_attributes.map do |attr|
+      attribute_types.map do |attr|
         attribute_types[attr].permitted_attribute(attr)
       end.uniq
     end
